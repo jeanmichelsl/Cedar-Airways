@@ -1,0 +1,29 @@
+{
+  "name": "cedar-airways",
+  "version": "1.0.0",
+  "description": "bootsrap4 project",
+  "main": "index.html",
+
+  "dependencies": {
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+   "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanmichelsl/Cedar-Airways.git"
+  },
+  "author": "Jean-Michel Sleiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanmichelsl/Cedar-Airways/issues"
+  },
+  "homepage": "https://github.com/jeanmichelsl/Cedar-Airways#readme"
+}

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/contact_us.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*--- navigation bar ---*/
+
+
+.navlogo {
+    margin-left: 0em;
+}
+
+.navbar {
+    background: rgba(204, 204, 204, 0.2);
+}
+
+.nav-link,
+.navbar-brand {
+
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.nav-link {
+    margin-right: 5em;
+}
+
+.nav-link:hover {
+    margin-right: 5em;
+    color: skyblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+.navbar-collapse {
+    justify-content: right;
+
+}
+
+.description {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 55%);
+    text-align: center;
+
+
+
+}
+
+div h1 {
+    font-size: 4rem;
+    color: darkgreen;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.btn,
+.btn-success,
+.btn-xl,
+button>a {
+    font-style: italic;
+    font-size: 1.6rem !important;
+    text-decoration: none;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-xl:hover,
+button>a:hover {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .description h1 {
+        display: block;
+        font-size: 2.6rem !important;
+        font-size: italic;
+    }
+
+    .description p {
+        display: block;
+        font-size: 1.4rem !important;
+        color: white;
+        font-style: italic;
+    }
+
+    .description .btn-xl {
+        font-size: 18px;
+        padding: 7px 12px;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+}

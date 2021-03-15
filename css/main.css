@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box; /*on an element, padding and border are included in the width and height */
+}
+
+body {
+    background-image: url('../images/skypic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;/*doesn't scroll with the page */
+    background-repeat: no-repeat; 
+}
+
+
+/*--- navigation bar ---*/
+
+.navbar {
+    background: rgba(204, 204, 204, 0.2);
+}
+
+.nav-link,
+.navbar-brand { /* navbarbrand was not used after all */
+
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.nav-link {
+    margin-right: 5em;
+}
+
+.nav-link:hover {
+    margin-right: 5em;
+    color: skyblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+.navbar-collapse {
+    justify-content: right;
+
+}
+
+.description {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 75%);
+    text-align: center;
+}
+
+.description h1 {
+    font-size: 4rem;
+    color: darkgreen;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.btn,
+.btn-success,
+.btn-xl,
+button a {
+    font-style: italic;
+    font-size: 1.6rem !important;
+    text-decoration: none;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-xl:hover,
+button a:hover {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+/* footer */
+.social_media {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgreen;
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.social_media ul {
+    list-style: none;
+    display: flex;
+    margin-right: 300px;
+    justify-content: center;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.social_media ul li {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid azure;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 5px 
+to align it properly */
+.social_media ul li .fa {
+    color: azure;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.social_media ul li:hover.facebook {
+    border: 3px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+/*twitter*/
+.social_media ul li:hover.twitter {
+    border: 3px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+/* instagram */
+.social_media ul li:hover.instagram {
+    border: 3px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+#mediatext {
+    font-size: 1.3em;
+    font-style: italic;
+    color: azure;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.social_media_small {
+    display: none;
+    position: fixed;
+    left: 0%;
+    top: 50%;
+    font-size: 1rem;
+
+}
+
+.social_media_small ul {
+    list-style: none;
+    display: block;
+    justify-content: left;
+}
+
+
+.social_media_small ul li {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -30px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.social_media_small ul li .fa {
+    color: azure;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+
+.social_media_small ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+/*twitter*/
+
+.social_media_small ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+/* instagram */
+
+
+.social_media_small ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+/* end of footer */
+
+
+@media screen and (max-width: 768px) {
+    .description h1 {
+        display: block;
+        font-size: 2.6rem !important;
+        font-style:  italic;
+    }
+
+    .description p {
+        display: block;
+        font-size: 1.2rem !important;
+        color: white;
+        font-style: italic;
+        margin-left: 30px;
+    }
+
+    .description .btn-xl {
+        font-size: 18px;
+        padding: 7px 12px;
+        border-radius: 6px;
+        margin: auto;
+    }
+
+    .social_media {
+        display: none;
+    }
+
+    .social_media_small {
+        display: block;
+    }
+
+    #mediatext {
+        display: none;
+    }
+}

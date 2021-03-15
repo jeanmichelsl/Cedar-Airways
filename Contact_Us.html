@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cedar Airways | Contact Us</title>
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/Contact_Us.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md smart-scroll">
+        <a class="navlogo" href="index.html"><img src="images/logo.png" alt="logo of a cedar" height="150px" width="150px"></a>
+        <button class="navbar-toggler navbar-dark " type="button" data-toggle="collapse" data-target="#mainnavigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="mainnavigation">
+            <ul class="navbar-nav ml-auto text-right">
+                <li class="nav-item  ">
+                    <a class="nav-link" href="Book_A_Trip.html">Book a Trip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Traveler_Info.html">Traveler Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About_Us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="description">
+        <h1>We'd Love To Hear From You!</h1>
+    </div>
+    <div class="container contact_form">
+        <form id="contactform" autocomplete="on">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your First Name..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your Last Name..." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="phone">Phone Number:</label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" id="phone" name="phone" placeholder="eg 961-76-123456" pattern="[0-9]{3}-[0-9]{2}-[0-9]{6}" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="options">Select a Subject:</label>
+                </div>
+                <div class="col-75">
+                    <select required id="options">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Booking_Info">Booking Info</option>
+                        <option value="Baggage_Info">Baggage Info</option>
+                        <option value="Ticketing">Ticketing</option>
+                        <option value="Cedar_Miles">Cedar Miles</option>
+                        <option value="Online_Checkin">Online Checkin</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Message:</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Let Us Know How We Can Help You!" style="height:150px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-75 buttons">
+                    <input type="button" value="Submit" class="btn btn-success btn-lg" type="button" id="submitbtn" onclick="pop()">
+                    <input type="button" value="Clear" class="btn btn-lg btn-success" onclick="clearform()">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="modalbox" class="centermodal">
+        <div class="header">
+            <h2>Success!</h2>
+            <a href="contact_us.html"> <i class="fas fa-times" id="times"></i></a>
+        </div>
+        <i class="fas fa-check" id="check"></i>
+        <p>Thank you for your feedback! You can continue browsing our website.</p>
+        <div class="line"></div>
+        <a href="contact_us.html" class="closemodal"> Close</a>
+    </div>
+    <div id="errorbox" class="centermodal">
+        <div class="header-error">
+            <h2>Error!</h2>
+            <a onclick="modalclose()"> <i class="fas fa-times" id="times"></i></a>
+        </div>
+        <i class="fas fa-times" id="error"></i>
+        <p>Please fill in the form correctly.</p>
+        <div class="line"></div>
+        <a onclick="modalclose()" class="close-error"> Close</a>
+    </div>
+    <div class=" container">
+        <h2 style="color: azure;">Alternatively, kindly contact us at our following addresses:</h2>
+    </div>
+    <div class=" emails ml-auto mr-auto">
+        <div class="container">
+            <h4>Help Center:</h4> <a href="mailto:help@cedarairways.com">help@cedarairways.com</a>
+        </div>
+        <div class="container">
+            <h4>Call Center:</h4><a href="mailto:callcenter@cedarairways.com"> callcenter@cedarairways.com</a>
+        </div>
+        <div class="container">
+            <h4>Offices:</h4><a href="mailto:offices@cedarairways.com">offices@cedarairways.com</a>
+        </div>
+        <div class="container">
+            <h4>Baggage Handlers:</h4> <a href="mailto:baggage@cedarairways.com">baggage@cedarairways.com</a>
+        </div>
+        <div class="container">
+            <h4>Careers:</h4><a href="mailto:careers@cedarairways.com">careers@cedarairways.com</a>
+        </div>
+    </div>
+
+    
+    <script src="https://kit.fontawesome.com/32450e90dc.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

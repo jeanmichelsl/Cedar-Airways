@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/book_a_trip.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*--- navigation bar ---*/
+
+
+.navlogo {
+    margin-left: 0em;
+}
+
+.navbar {
+    background: rgba(204, 204, 204, 0.2);
+}
+
+.nav-link,
+.navbar-brand {
+
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.nav-link {
+    margin-right: 5em;
+}
+
+.nav-link:hover {
+    margin-right: 5em;
+    color: skyblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+.navbar-collapse {
+    justify-content: right;
+
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text],
+input[type=radio],
+input[type=tel],
+input[type=email],
+input[type=date],
+input[type=number],
+option,
+select,
+textarea {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+select:required:invalid {
+    color: gray;
+}
+
+option[disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+/* Style the label to display next to the inputs */
+label,
+p {
+    font-size: 1.4rem;
+    color: solid black;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+/* Style the container */
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-50-left {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Floating column for inputs: 75% width */
+.col-50-right {
+    float: right;
+    width: 50%;
+    margin-top: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.buttons_book {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.booking_form {
+    background-color: hsla(0, 0%, 95%, 0.5);
+    border-radius: 20px;
+    padding: 80px 80px;
+    margin: 50px 50px;
+}
+
+#yesbaggage {
+    display: none;
+    width: 40%;
+    margin-top: 10px;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+input.invalid,
+select.invalid {
+    background-color: #ffdddd;
+}
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 17px;
+    width: 17px;
+    margin: 0 2px;
+    background-color: #0873ba;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: lightblue;
+}
+
+.smallclass {
+    font-size: 1rem;
+}
+
+.roundtrip_oneway {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 20px;
+    display: flex;
+}
+
+/* styles for radio buttons: */
+.radio {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 1.4rem;
+    margin: 15px;
+}
+/* l actual radio khabbe, w 3emel a new one b span class label */
+.radio .label {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.radio .label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #0873ba;
+    transform: scale(0);
+    transition: all 0.2s ease;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.radio:hover .label:after {
+    transform: scale(3.6);
+}
+
+input[type="radio"]:checked+.label {
+    border-color: #0873ba;
+}
+
+input[type="radio"]:checked+.label:after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* popup modal */
+.centermodal,
+#modalbox,
+#errorbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#modalbox,
+#errorbox {
+    width: 400px;
+    height: 350px;
+    background: azure;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: all 0.3s ease-in;
+
+}
+
+p {
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-align: center;
+
+}
+
+.header {
+    height: 60px;
+    background: #27ae60;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+
+}
+
+#check {
+    margin-top: 20px;
+    font-size: 50px;
+    color: #27ae60;
+    font-weight: bold;
+    height: 80px;
+    width: 80px;
+    border: 2px solid #27ae60;
+    text-align: center;
+    padding-top: 13px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#times {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #e8f7fc;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.header h2 {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.closemodal {
+    position: absolute;
+    bottom: 12px;
+    right: 25px;
+    border: 1px solid #27ae60;
+    border-radius: 3px;
+    color: #27ae60;
+    padding: 8px 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.closemodal:hover {
+    background: #27ae60;
+    color: white;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.line {
+    bottom: 60px;
+    width: 100%;
+    height: 1px;
+    background: silver;
+    position: absolute;
+}
+
+.header-error {
+    height: 60px;
+    background: #D8000C;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+
+}
+
+#error {
+    margin: 20px 20px;
+    font-size: 50px;
+    color: #D8000C;
+    font-weight: bold;
+    height: 80px;
+    width: 80px;
+    border: 2px solid #D8000C;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.header-error h2 {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.close-error {
+    position: absolute;
+    bottom: 12px;
+    right: 25px;
+    border: 1px solid #D8000C;
+    border-radius: 3px;
+    color: #D8000C;
+    padding: 8px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close-error:hover {
+    background: #D8000C;
+    color: white;
+    transition: .5s;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .col-50-left,
+    .col-50-right {
+        width: 100%;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type=submit],
+    input[type=clear] {
+        margin-left: 0;
+    }
+
+    #modalbox,
+    #errorbox {
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+}

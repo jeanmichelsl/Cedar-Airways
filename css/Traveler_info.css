@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+.footer {
+  background-color: lightgrey;
+  margin: 0px auto;
+  padding: 20px 0px; }
+
+/*--- navigation bar ---*/
+.navbar {
+    background: url(../images/about_us.jpg);
+    background-size: 100%;
+}
+
+.nav-link,
+.navbar-brand {
+
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+
+
+}
+
+.nav-link {
+    margin-right: 5em;
+}
+
+.nav-link:hover {
+    margin-right: 5em;
+    color: skyblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+.navbar-collapse {
+    justify-content: right;
+
+}
+
+.subnavbar {
+    background-color: #0873ba;
+    padding: 10px 10px;
+
+}
+
+.subnav {
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: azure;
+    font-family: sans-serif;
+    padding: 10px 10px;
+
+}
+
+.subnav:hover {
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: skyblue;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #0052cc;
+    padding: 10px 10px;
+}
+
+.subnavpic {
+    width: 100%;
+    height: 50%;
+}
+
+.description {
+
+    color: solid black;
+    justify-content: all;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.description h1 {
+    text-align: center;
+    color: #0873ba;
+    font-size: 3rem;
+
+}
+
+.baggage_button {
+    border: none;
+    padding: 2px 2px;
+    margin: 10px 10px 10px 0px;
+    background: none;
+    font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+i {
+    color: #0873ba;
+    padding-top: 8px;
+    margin-right: 8px;
+}
+
+.checkin_info {
+
+    border-style: solid;
+    border-color: dimgrey;
+    border-width: 1.5px;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-right: 60px;
+    padding: 15px 15px;
+    width: 35%;
+    height: 45%;
+    display: block;
+    text-align: center;
+
+}
+
+.paxbtn {
+    width: 95%;
+    text-align: left !important;
+}
+
+.beirutairport {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.olbaimage {
+    width: 60%;
+    max-width: 600px;
+}
+
+.col-sm {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+/* footer */
+.social_media {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.social_media ul {
+    list-style: none;
+    
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.social_media ul li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid azure;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 5px 
+to align it properly */
+.social_media ul li .fa {
+    color: azure;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.social_media ul li:hover.facebook {
+    border: 3px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+/*twitter*/
+.social_media ul li:hover.twitter {
+    border: 3px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+/* instagram */
+.social_media ul li:hover.instagram {
+    border: 3px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+.social_media ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .description h1 {
+        font-size: 2.2rem;
+        font-size: italic;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    i {
+        transform: scale(0.8);
+        padding-top: 3px;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .checkin_info {
+        border-style: solid;
+        border-color: dimgrey;
+        border-width: 1px;
+        margin-left: 30px;
+        margin-top: 25px;
+        margin-right: 30px;
+        padding: 10px 10px;
+        width: 50%;
+        height: 35%;
+        display: block;
+        text-align: center;
+    }
+
+    .beirutairport {
+        display: block;
+    }
+}
+
+.beirutairport img {
+    width: 100%;
+    height: 100%;
+}
+}
+
